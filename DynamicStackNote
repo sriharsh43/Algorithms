@@ -1,0 +1,14 @@
+we will explore the DynamicStack class, which extends a custom stack implementation. This class allows for dynamic resizing of the stack when it reaches its capacity, ensuring that we can always add new elements without running into overflow issues. 
+Key Concepts :
+Stack Data Structure: A stack is a collection of elements that follows the Last In First Out (LIFO) principle. You can only add or remove elements from the top of the stack.
+Dynamic Resizing: Unlike a fixed-size stack, a dynamic stack can grow in size as needed. This is particularly useful when the number of elements is not known in advance.
+Inheritance: The DynamicStack class extends a base class called CustomStack, which likely contains the core stack functionalities.
+
+The DynamicStack class consists of:
+An overridden push method that checks if the stack is full and resizes the internal array if necessary.
+Check if Full: The method first checks if the stack is full using this.isFull(). If it is, we need to resize the stack.
+Resize the Array:
+A new temporary array temp is created with the same length as the current data array.
+A loop is used to copy all existing elements from the data array to the temp array.
+Assign New Array: The data reference is updated to point to the new temp array.
+Insert Item: Finally, the method calls super.push(item) to add the new item to the stack.
