@@ -1,0 +1,39 @@
+We will explore a custom implementation of a stack data structure in Java.A stack is a collection of elements that follows the 
+Last In, First Out (LIFO) principle, meaning the last element added to the stack is the first one to be removed.
+Key Concepts
+Push: Adding an element to the top of the stack.
+Pop: Removing the top element from the stack.
+Peek: Viewing the top element without removing it.
+Full: A condition where no more elements can be added to the stack.
+Empty: A condition where no elements are present in the stack.
+
+Code Structure : 
+The CustomStack class is structured to manage an array of integers, providing methods to manipulate the stack. Here’s a breakdown of its components:
+
+Data Members:
+
+data: An array that holds the stack elements.
+default_size: A constant that defines the default size of the stack.
+ptr: An integer that acts as a pointer to the current top of the stack.
+Constructors:
+
+A default constructor that initializes the stack with a default size.
+A parameterized constructor that allows the user to specify the size of the stack.
+Methods:
+
+push(int item): Adds an item to the stack.
+pop(): Removes and returns the top item from the stack.
+peek(): Returns the top item without removing it.
+isFull(): Checks if the stack is full.
+
+Explanation of Functions
+push(int item): This method checks if the stack is full using isFull(). If it is not full, it increments the pointer ptr and adds the item to the stack. If the stack is full, it prints a message and returns false.
+
+pop(): This method first checks if the stack is empty using isEmpty(). If it is not empty, it returns the top element and decrements the pointer ptr. If the stack is empty, it throws a StackException.
+
+peek(): Similar to pop(), this method checks if the stack is empty. If not, it returns the top element without modifying the stack. If the stack is empty, it throws a StackException.
+
+isFull(): This method checks if the pointer ptr is at the last index of the array, indicating that the stack cannot accept more elements.
+
+isEmpty(): This method checks if the pointer ptr is at -1, which means the stack is empty.
+isEmpty(): Checks if the stack is empty.
